@@ -53,6 +53,7 @@ public class CacheConfig {
         javax.cache.CacheManager ehCacheManager = cachingProvider.getCacheManager();
 
         // Create EhCache configuration
+        // We are not using ehcache.xml
         ehCacheManager.createCache("employees", Eh107Configuration.fromEhcacheCacheConfiguration(
                 CacheConfigurationBuilder.newCacheConfigurationBuilder(Object.class, Object.class, ResourcePoolsBuilder.heap(100))
                         .build())
